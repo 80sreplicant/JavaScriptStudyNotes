@@ -51,6 +51,7 @@ function generatePlayerCard(name, age, height) {
   <h2>${name} - ${age}</h2>
   <p>Their height is ${height} and ${age} years old. In Dog years this person would be ${age *
     7}. That would be a tall dog!</p>
+    <button class="delete" type+"button">Delete</button>
   </div>
   `;
   return html;
