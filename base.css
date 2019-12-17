@@ -103,7 +103,7 @@ h6 {
   color: white;
   margin-top: 0;
   line-height: 1;
-  text-shadow: var(--text-shadow);
+  /* text-shadow: var(--text-shadow); */
 }
 .wrapper h1,
 .wrapper h2,

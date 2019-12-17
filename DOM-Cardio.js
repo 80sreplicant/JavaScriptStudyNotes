@@ -50,7 +50,8 @@ function generatePlayerCard(name, age, height) {
   const html = `
     <div class="playerCard">
       <h2>${name} - ${age}</h2>
-      <p>Their ${height} and ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!</p>
+      <p>Their ${height} is ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!</p>
+      <button class="delete" type="button">&times; Delete</button>
       </div>`
       return html;
 };
@@ -62,14 +63,26 @@ function generatePlayerCard(name, age, height) {
 // </div>
 
 // make a new div with a class of cards
-const cardDiv = document.createElement(`div`);
+const cards = document.createElement(`div`);
 cards.classList.add(`cards`);
 // Have that function make 4 cards
+let cardsHTML = generatePlayerCard(`jose`, 13, 150);
+cardsHTML = cardsHTML + generatePlayerCard(`Molly`, 10, 5);
+cardsHTML = cardsHTML + generatePlayerCard(`Lauren`, 17, 7);
+cardsHTML = cardsHTML + generatePlayerCard(`Aris`, 20, 11);
 
+cards.innerHTML = cardsHTML;
+div.insertAdjacentElement(`beforebegin`, cards);
 // append those cards to the div
 // put the div into the DOM just before the wrapper element
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
 // select all the buttons!
+const buttons = document.querySelectorAll(`.delete`);
 // make out delete function
+function deleteCard(event) {
+  const buttonThatGotClicked = event.currentTarget;
+  buttonThatGotClicked.closest(`.playerCard`).remove();
+}
 // loop over them and attach a listener
+buttons.forEach(button => button.addEventListener(`click`, deleteCard));
