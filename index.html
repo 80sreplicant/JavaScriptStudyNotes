@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Dom Cardio</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Dom Cardio</title>
-  <link rel="stylesheet" href="base.css">
-</head>
+  <body>
 
-<body>
+    <button type="button" class="butts">Click Me</button>
 
-  <!-- <p class="wes">I am Wes, I <em>love</em>to bbq!</p>
+    <button class="cool">Click me also</button>
+
+    <h1>Lots of Buttons</h1>
+
+    <button data-price="100" class="buy">But Item <strong>1</strong></button>
+    <button data-price="200" class="buy">But Item <strong>2</strong></button>
+    <button data-price="300" class="buy">But Item <strong>3</strong></button>
+    <button data-price="400" class="buy">But Item <strong>4</strong></button>
+    <button data-price="500" class="buy">But Item <strong>5</strong></button>
+    <button data-price="600" class="buy">But Item <strong>6</strong></button>
+    <button data-price="700" class="buy">But Item <strong>7</strong></button>
+    <button data-price="800" class="buy">But Item <strong>8</strong></button>
+    <button data-price="900" class="buy">But Item <strong>9</strong></button>
+    <button data-price="1000" class="buy">But Item <strong>10</strong></button>
+
+    <img class="photo" src="https://picsum.photos/200" alt="Nice">
+    <!-- <p class="wes">I am Wes, I <em>love</em>to bbq!</p>
 
   <h1 class="item">Mando!!!</h1>
 <p class="pizza">Is this pizza or nah?</p>
 
 <img src="https://picsum.photos/400" alt="Random Image" class="random"> -->
 
-  
-  <script src="DOM-Cardio.js"></script>
+    <script src="eventListener2.js"></script>
 
-  <style>
+    <style>
+      img {
+        transition: all 0.2s;
+      }
+      .round {
+        transform: translate(50px, 25%) rotate(1turn);
+        border-radius: 30%;
+        height: 200px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+      }
 
-    img {
-      transition: all 0.2s;
-    }
-    .round {
-      transform: translate(50px, 25%) rotate(1turn);
-      border-radius: 30%;
-      height: 200px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 10px;
-      padding: 20px;
-    }
+      .playerCard {
+        background: white;
+        padding: 20px;
+      }
 
-    .playerCard {
-      background: white;
-      padding: 20px;
-    }
-
-    .playerCard h2 {
-      color: black;
-    }
-  </style>
-</body>
-
+      .playerCard h2 {
+        color: black;
+      }
+    </style>
+  </body>
 </html>
